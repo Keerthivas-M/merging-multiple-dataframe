@@ -1,11 +1,11 @@
+#import pandas and numpy packages
 import pandas as pd
 import numpy as np
+#enter input values to id filename
 load = input("Enter the normal load")
 temp = input("Enter the temperature")
+#read multiple csv files space seperated and skip firstrow 
 lf1 = pd.read_csv('p0d_'+load+'nN_'+temp+'K_sliding1.profile', sep = ' ',skiprows=1)
-# lf1 = lf1.iloc[1:,:]
-# lf1.drop(index=lf1.index[0], axis=0, inplace=True)
-# print(lf1[:5])
 lf2 = pd.read_csv('p0d_'+load+'nN_'+temp+'K_sliding2.profile', sep = ' ',skiprows=1)
 lf2 = lf2.iloc[1:,:]
 lf3 = pd.read_csv('p0d_'+load+'nN_'+temp+'K_sliding3.profile', sep = ' ',skiprows=1)
